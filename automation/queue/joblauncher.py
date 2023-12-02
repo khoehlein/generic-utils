@@ -25,7 +25,7 @@ class JobLauncher(object):
                     self._active_queue = queue
                     break
             if response is None:
-                print('[INFO] Launcher {}: No jobs remaining')
+                print('[INFO] Launcher {}: No jobs remaining'.format(self._pid))
                 if self._wait:
                     print('[INFO] Waiting for new jobs...')
                     sleep(self._sleep_time)
